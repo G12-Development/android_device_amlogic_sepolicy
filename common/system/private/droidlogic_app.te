@@ -1,0 +1,9 @@
+type droidlogic_app, domain, coredomain;
+
+allow droidlogic_app sysfs_extcon:dir read;
+allow droidlogic_app system_control:binder { call transfer };
+
+# Below this comment, those policies hit neverallow rules
+allow droidlogic_app systemcontrol_hwservice:hwservice_manager { find };
+allow droidlogic_app system_suspend_control_service:service_manager find;
+allow droidlogic_app system_suspend_control_internal_service:service_manager find;
