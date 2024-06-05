@@ -51,3 +51,5 @@ set_prop(system_control, vendor_media_prop)
 set_prop(system_control, vendor_netflix_prop)
 
 vndbinder_use(system_control)
+
+allow system_control droidlogic_app:binder call;
